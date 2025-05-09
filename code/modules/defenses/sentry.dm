@@ -197,6 +197,12 @@
 	if(QDELETED(O) || QDELETED(user))
 		return
 
+	//Hacking
+	if(HAS_TRAIT(O, TRAIT_TOOL_MULTITOOL))
+		if(immobile)
+			to_chat(user, SPAN_WARNING("[src] is completely welded in place. You can't move it without damaging it."))
+			return
+
 	//Securing/Unsecuring
 	if(HAS_TRAIT(O, TRAIT_TOOL_WRENCH))
 		if(immobile)
@@ -484,8 +490,6 @@
 	. = ..()
 	. += SPAN_NOTICE("It seems this one's bolts have been securely welded into the floor, and the access panel locked. You can't interact with it.")
 
-/obj/structure/machinery/defenses/sentry/premade/attackby(obj/item/O, mob/user)
-	return
 
 /obj/structure/machinery/defenses/sentry/premade/power_on()
 	return
@@ -500,6 +504,13 @@
 	name = "modified UA-577 Gauss Turret"
 	desc = "A deployable, semi-automated turret with AI targeting capabilities. Armed with an M30 Autocannon and a high-capacity drum magazine. This one's IFF system has been disabled, and it will open fire on any targets within range."
 	faction_group = null
+	ammo = new /obj/item/ammo_magazine/sentry/premade/dumb
+
+/obj/structure/machinery/defenses/sentry/premade/dumb/clf
+	icon = 'icons/obj/structures/machinery/defenses/clf_defenses.dmi'
+	name = "hacked UA-577 Gauss Turret"
+	desc = "A deployable, semi-automated turret with AI targeting capabilities. Armed with an M30 Autocannon and a high-capacity drum magazine. This one has a rusted exterior and missing panels, exposing some of the interior circuity."
+	faction_group = FACTION_CLF
 	ammo = new /obj/item/ammo_magazine/sentry/premade/dumb
 
 //the turret inside a static sentry deployment system
@@ -895,6 +906,13 @@
 	sentry_range = 3
 	omni_directional = TRUE
 	handheld_type = /obj/item/defenses/handheld/sentry/upp/light
+
+/obj/structure/machinery/defenses/sentry/clf
+	name = "\improper UA 571-C sentry gun"
+	desc = "A deployable, semi-automated turret with AI targeting capabilities. Armed with an M30 Autocannon and a 500-round drum magazine. This one is rusted and has exposed circuitry."
+	icon = 'icons/obj/structures/machinery/defenses/clf_defenses.dmi'
+	sentry_type = "uac_sentry"
+	handheld_type = /obj/item/defenses/handheld/sentry/clf
 
 /obj/structure/machinery/defenses/sentry/omni
 	name = "\improper UA 571-D omnidirectional sentry gun"

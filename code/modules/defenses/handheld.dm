@@ -191,6 +191,14 @@
 	defense_type = /obj/structure/machinery/defenses/sentry/upp/light
 	deployment_time = 2 SECONDS
 
+/obj/item/defenses/handheld/sentry/clf
+	name = "handheld UA 571-C sentry gun"
+	desc = "A rusted, modified deplyoable version of the USCM defense sentry commonly seen in UA space."
+	icon = 'icons/obj/structures/machinery/defenses/clf_defenses.dmi'
+	icon_state = "Normal uac_sentry_handheld"
+	defense_type = /obj/structure/machinery/defenses/sentry/clf
+	deployment_time = 5 SECONDS
+
 // FLAMER BASE AND UPGRADES
 /obj/item/defenses/handheld/sentry/flamer
 	name = "handheld UA 42-F sentry flamer"

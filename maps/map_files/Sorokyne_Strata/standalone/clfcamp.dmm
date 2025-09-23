@@ -29,6 +29,10 @@
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/exterior/far_north_outpost)
+"ae" = (
+/obj/structure/fence/dark,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/strata/exterior/far_north_outpost)
 "af" = (
 /obj/effect/landmark/survivor_spawner/clf/soro,
 /obj/item/ammo_casing,
@@ -1021,10 +1025,6 @@
 /obj/structure/cargo_container/upp/mid,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/exterior/far_north_outpost)
-"cK" = (
-/obj/structure/fence/slim/upp,
-/turf/open/asphalt/cement/cement12,
-/area/strata/interior/outpost/clf_dorms)
 "cL" = (
 /obj/effect/decal/strata_decals/mud_corner{
 	dir = 9
@@ -1072,52 +1072,17 @@
 /obj/effect/landmark/survivor_spawner/clf_coordinator/soro,
 /turf/open/floor/wood,
 /area/strata/interior/outpost/clf_office)
-"cT" = (
-/obj/structure/sign/banners/clf_worn{
-	pixel_x = 9;
-	pixel_y = 31
-	},
-/turf/open/auto_turf/strata_grass/layer1,
+"db" = (
+/turf/closed/wall/strata_ice/rock,
+/area/strata/interior)
+"dc" = (
+/turf/closed/wall/strata_ice/jungle,
+/area/strata/interior)
+"dd" = (
+/obj/structure/fence/dark,
+/turf/open/gm/dirt/brown,
 /area/strata/exterior/far_north_outpost)
-"cU" = (
-/obj/structure/machinery/light/small{
-	dir = 1
-	},
-/turf/open/auto_turf/snow/brown_base/layer0,
-/area/strata/exterior/far_north_outpost)
-"cV" = (
-/obj/structure/fence/slim/upp/door{
-	dir = 4
-	},
-/turf/open/asphalt/cement/cement1/north,
-/area/strata/interior/outpost/clf_dorms)
-"cW" = (
-/obj/item/trash/cigbutt,
-/obj/structure/fence/slim/upp/door{
-	dir = 4
-	},
-/turf/open/asphalt/cement/cement1/north,
-/area/strata/interior/outpost/clf_dorms)
-"cX" = (
-/obj/structure/fence/slim/upp,
-/turf/open/auto_turf/strata_grass/layer1,
-/area/strata/exterior/far_north_outpost)
-"cY" = (
-/obj/item/trash/cigbutt,
-/obj/structure/fence/slim/upp/door{
-	dir = 1
-	},
-/turf/open/asphalt/cement/cement12,
-/area/strata/interior/outpost/clf_dorms)
-"cZ" = (
-/obj/item/trash/cigbutt,
-/obj/structure/fence/slim/upp,
-/turf/open/asphalt/cement/cement12,
-/area/strata/interior/outpost/clf_dorms)
-"da" = (
-/obj/structure/fence/slim/upp/door{
-	dir = 1
-	},
+"de" = (
 /turf/open/asphalt/cement/cement12,
 /area/strata/interior/outpost/clf_dorms)
 "dk" = (
@@ -1648,7 +1613,7 @@
 /area/strata/exterior/far_north_outpost)
 "wA" = (
 /obj/structure/largecrate/supply/ammo/shotgun,
-/turf/open/floor/strata/multi_tiles/southeast,
+/turf/open/floor/strata/orange_cover,
 /area/strata/interior/outpost/clf_dorms)
 "xt" = (
 /turf/open/floor/wood,
@@ -1806,7 +1771,7 @@
 	pixel_x = 6;
 	pixel_y = -4
 	},
-/turf/open/floor/strata/multi_tiles/southeast,
+/turf/open/floor/strata/orange_cover,
 /area/strata/interior/outpost/clf_dorms)
 "Ck" = (
 /obj/structure/flora/pottedplant{
@@ -1886,7 +1851,7 @@
 /obj/item/ammo_magazine/rifle/m16/ap,
 /obj/item/ammo_magazine/rifle/m16/ap,
 /obj/item/ammo_magazine/rifle/m16/ap,
-/turf/open/floor/strata/multi_tiles/southeast,
+/turf/open/floor/strata/orange_cover,
 /area/strata/interior/outpost/clf_dorms)
 "Fn" = (
 /obj/structure/barricade/sandbags{
@@ -1943,7 +1908,7 @@
 /obj/item/ammo_magazine/rifle/mar40,
 /obj/item/ammo_magazine/rifle/mar40,
 /obj/item/ammo_magazine/rifle/mar40,
-/turf/open/floor/strata/multi_tiles/southeast,
+/turf/open/floor/strata/orange_cover,
 /area/strata/interior/outpost/clf_dorms)
 "GR" = (
 /obj/structure/platform/stone/soro/north,
@@ -2017,7 +1982,7 @@
 /area/strata/exterior/far_north_outpost)
 "JD" = (
 /obj/structure/largecrate/random/case/double,
-/turf/open/floor/strata/multi_tiles/southeast,
+/turf/open/floor/strata/orange_cover,
 /area/strata/interior/outpost/clf_dorms)
 "JY" = (
 /obj/item/weapon/gun/smg/fp9000,
@@ -2059,7 +2024,7 @@
 /area/strata/exterior/far_north_outpost)
 "Ld" = (
 /obj/structure/largecrate/supply,
-/turf/open/floor/strata/multi_tiles/southeast,
+/turf/open/floor/strata/orange_cover,
 /area/strata/interior/outpost/clf_dorms)
 "LC" = (
 /turf/open/floor/wood,
@@ -2113,7 +2078,7 @@
 /obj/item/ammo_magazine/rifle/mar40/lmg{
 	pixel_y = 8
 	},
-/turf/open/floor/strata/multi_tiles/southeast,
+/turf/open/floor/strata/orange_cover,
 /area/strata/interior/outpost/clf_dorms)
 "OF" = (
 /obj/structure/surface/table/woodentable/poor,
@@ -2268,7 +2233,7 @@
 /obj/structure/machinery/light/small{
 	dir = 4
 	},
-/turf/open/floor/strata/orange_cover,
+/turf/open/asphalt/cement/cement12,
 /area/strata/interior/outpost/clf_dorms)
 "Tl" = (
 /obj/structure/bed/stool{
@@ -2278,10 +2243,6 @@
 	pixel_y = 3
 	},
 /turf/open/floor/wood,
-/area/strata/interior/outpost/clf_dorms)
-"Tt" = (
-/obj/structure/fence/slim/upp,
-/turf/open/asphalt/cement/cement1/north,
 /area/strata/interior/outpost/clf_dorms)
 "Tx" = (
 /obj/item/alien_embryo,
@@ -2317,7 +2278,7 @@
 	pixel_x = -5;
 	pixel_y = 7
 	},
-/turf/open/floor/strata/orange_cover,
+/turf/open/asphalt/cement/cement12,
 /area/strata/interior/outpost/clf_dorms)
 "Vc" = (
 /obj/effect/decal/cleanable/blood/drip{
@@ -2365,7 +2326,7 @@
 /area/strata/interior/outpost/clf_dorms)
 "Vv" = (
 /obj/structure/largecrate/supply/floodlights,
-/turf/open/floor/strata/multi_tiles/southeast,
+/turf/open/floor/strata/orange_cover,
 /area/strata/interior/outpost/clf_dorms)
 "Vy" = (
 /obj/effect/decal/cleanable/blood,
@@ -2637,7 +2598,7 @@ cH
 cH
 cH
 cH
-bA
+cH
 bg
 zq
 zq
@@ -2669,8 +2630,8 @@ cH
 cH
 cH
 cH
-bA
-bA
+cH
+cH
 fR
 fR
 zq
@@ -2702,7 +2663,7 @@ qS
 Gl
 Qr
 xH
-bA
+cH
 fR
 vG
 Qo
@@ -2735,9 +2696,9 @@ Mx
 vY
 VR
 xH
-cT
-ts
-bg
+aU
+bs
+fR
 zq
 GR
 XI
@@ -2768,8 +2729,8 @@ ck
 Sl
 Sl
 xH
-zq
 jl
+zq
 zq
 zq
 LY
@@ -2795,14 +2756,14 @@ Zy
 fR
 fR
 Ef
-xH
-Tt
-cW
-cV
-Tt
-xH
-cU
+ae
+ae
+bI
 zq
+ae
+ae
+zq
+aY
 eg
 GR
 aJ
@@ -2828,9 +2789,9 @@ fR
 fR
 Zy
 fR
-cX
+ae
 ad
-bI
+bJ
 GD
 bE
 aT
@@ -2861,7 +2822,7 @@ Zy
 bt
 bt
 fR
-cX
+ae
 bM
 zq
 zq
@@ -2894,7 +2855,7 @@ bY
 bt
 bT
 Zy
-cX
+ae
 bN
 zq
 zq
@@ -2927,7 +2888,7 @@ bx
 ce
 bV
 bt
-cX
+ae
 bN
 zq
 bs
@@ -3020,7 +2981,7 @@ fR
 bJ
 zq
 CN
-cX
+ae
 zq
 cg
 ag
@@ -3053,7 +3014,7 @@ cE
 cB
 bJ
 cw
-cX
+ae
 zq
 ft
 cf
@@ -3180,12 +3141,12 @@ cH
 nN
 nN
 nN
-nN
+dd
 YU
 zq
 zq
 cw
-cX
+ae
 fR
 Ky
 fR
@@ -3213,12 +3174,12 @@ cH
 NO
 Vv
 Va
-cK
+dd
 zq
 bs
 fR
 cw
-cX
+ae
 bs
 fR
 fR
@@ -3245,8 +3206,8 @@ cH
 cH
 Ld
 GJ
-Sl
-cY
+de
+bJ
 zq
 fR
 bg
@@ -3278,8 +3239,8 @@ cH
 cH
 Fe
 JD
-Sl
-cZ
+de
+bJ
 zq
 zq
 fR
@@ -3311,8 +3272,8 @@ cH
 cH
 Ld
 JD
-Sl
-da
+de
+zq
 zq
 zq
 fR
@@ -3345,7 +3306,7 @@ cH
 wA
 Cf
 SZ
-cK
+ae
 GD
 zq
 bs
@@ -3378,7 +3339,7 @@ cH
 nN
 nN
 nN
-nN
+ae
 zq
 zq
 zq
@@ -3669,9 +3630,9 @@ cH
 xZ
 "}
 (36,1,1) = {"
-cH
-cH
-cH
+db
+db
+db
 lC
 Zo
 Zo
@@ -3685,8 +3646,8 @@ Zo
 Zo
 PJ
 cb
-cH
-cH
+db
+db
 ac
 ac
 ac
@@ -3702,9 +3663,9 @@ ac
 ac
 "}
 (37,1,1) = {"
-bA
-cH
-cH
+dc
+db
+db
 lC
 Zo
 Zo
@@ -3718,8 +3679,8 @@ Zo
 Zo
 PJ
 cc
-cH
-cH
+db
+db
 ac
 ac
 ac
@@ -3735,9 +3696,9 @@ ac
 ac
 "}
 (38,1,1) = {"
-bA
-cH
-cH
+dc
+db
+db
 lC
 Zo
 Zo
@@ -3751,8 +3712,8 @@ Zo
 Zo
 PJ
 cd
-cH
-cH
+db
+db
 ac
 ac
 ac
@@ -3768,9 +3729,9 @@ ac
 ac
 "}
 (39,1,1) = {"
-bA
-cH
-cH
+dc
+db
+db
 lC
 Zo
 Zo
@@ -3783,9 +3744,9 @@ Zo
 Zo
 Zo
 PJ
-cH
-cH
-cH
+db
+db
+db
 ac
 ac
 ac
@@ -3801,9 +3762,9 @@ ac
 ac
 "}
 (40,1,1) = {"
-bA
-bA
-cH
+dc
+dc
+db
 lC
 Zo
 Zo
@@ -3816,9 +3777,9 @@ Zo
 Zo
 Zo
 PJ
-cH
-cH
-cH
+db
+db
+db
 ac
 ac
 ac
@@ -3834,9 +3795,9 @@ ac
 ac
 "}
 (41,1,1) = {"
-bA
-bA
-cH
+dc
+dc
+db
 Xp
 wl
 wl
@@ -3849,9 +3810,9 @@ wl
 wl
 wl
 lj
-cH
-cH
-cH
+db
+db
+db
 ac
 ac
 ac
@@ -3867,24 +3828,24 @@ ac
 ac
 "}
 (42,1,1) = {"
-bA
-bA
-bA
-bA
-bA
+dc
+dc
+dc
+dc
+dc
 fb
 fR
 fR
 fR
 jM
 SG
-cH
-cH
-cH
-cH
-cH
-cH
-cH
+db
+db
+db
+db
+db
+db
+db
 ac
 ac
 ac
@@ -3900,24 +3861,24 @@ ac
 ac
 "}
 (43,1,1) = {"
-bA
-bA
-bA
-bA
-bA
-bA
-bA
-bA
-bA
-bA
-bA
-cH
-cH
-cH
-cH
-cH
-cH
-cH
+dc
+dc
+dc
+dc
+dc
+dc
+dc
+dc
+dc
+dc
+dc
+db
+db
+db
+db
+db
+db
+db
 ac
 ac
 ac

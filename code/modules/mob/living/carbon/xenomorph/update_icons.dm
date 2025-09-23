@@ -104,8 +104,6 @@
 	. = ..()
 	update_icons()
 	update_wounds()
-	overlays -= acid_overlay
-
 /mob/living/carbon/xenomorph/on_floored_end()
 	. = ..()
 	update_icons()

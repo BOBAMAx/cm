@@ -119,7 +119,7 @@
 	for(var/datum/language/L in languages)
 		dat += "<b>[L.name] (:[L.key])</b><br/>Speech Synthesizer: <i>[(L in speech_synthesizer_langs)? "YES":"NOT SUPPORTED"]</i><br/>[L.desc]<br/><br/>"
 
-	src << browse(HTML_SKELETON(dat), "window=checklanguage")
+	src << browse(dat, "window=checklanguage")
 	return
 
 

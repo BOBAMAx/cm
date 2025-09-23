@@ -26,7 +26,7 @@
 	GLOB.living_mob_list -= src
 	cleanup_status_effects()
 	pipes_shown = null
-	QDEL_NULL(observed_atom)
+	observed_atom = null
 
 	. = ..()
 

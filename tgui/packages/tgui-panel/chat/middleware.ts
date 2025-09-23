@@ -13,7 +13,6 @@ import {
   importSettings,
   loadSettings,
   removeHighlightSetting,
-  updateHighlightKeywords,
   updateHighlightSetting,
   updateSettings,
 } from '../settings/actions';
@@ -197,15 +196,13 @@ export const chatMiddleware = (store) => {
       type === addHighlightSetting.type ||
       type === removeHighlightSetting.type ||
       type === updateHighlightSetting.type ||
-      type === importSettings.type ||
-      type === updateHighlightKeywords.type
+      type === importSettings.type
     ) {
       next(action);
       const nextSettings = selectSettings(store.getState());
       chatRenderer.setHighlight(
         nextSettings.highlightSettings,
         nextSettings.highlightSettingById,
-        nextSettings.highlightKeywords,
       );
 
       return;

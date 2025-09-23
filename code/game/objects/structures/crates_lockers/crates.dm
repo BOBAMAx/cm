@@ -125,7 +125,6 @@
 			return
 	else if(istype(W, /obj/item/device/radio/electropack))
 		if(rigged)
-			overlays += "securecrate_tampered"
 			to_chat(user, SPAN_NOTICE("You attach [W] to [src]."))
 			user.drop_held_item()
 			W.forceMove(src)

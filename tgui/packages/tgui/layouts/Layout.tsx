@@ -20,14 +20,10 @@ type Props = Partial<{
 
 export function Layout(props: Props) {
   const { className, theme = 'weyland_yutani', children, ...rest } = props;
-  const themeClass = `theme-${theme}`;
-
-  useEffect(() => {
-    document.documentElement.className = themeClass;
-  }, [themeClass]);
+  document.documentElement.className = `theme-${theme}`;
 
   return (
-    <div className={themeClass}>
+    <div className={'theme-' + theme}>
       <div
         className={classes(['Layout', className, computeBoxClassName(rest)])}
         {...computeBoxProps(rest)}

@@ -6,7 +6,6 @@
 	probability = 0
 	name_of_spawn = /obj/effect/landmark/ert_spawns/distress/hunt_spawner
 	shuttle_id = ""
-	ert_message = "Prey is being set loose in the Yautja Hunting Grounds"
 	var/hunt_name
 	var/message = "You are still expected to uphold the RP of the standard as this character!"
 
@@ -185,7 +184,6 @@
 	mob_max = 3
 	mob_min = 1
 	objectives = "Hunt down and defeat prey within the hunting grounds to earn your mark. You may not: Stun hit prey, hit prey in cloak or excessively run away to heal."
-	ert_message = "A group of Yautja Youngbloods are being awakened for a hunt"
 	name_of_spawn = /obj/effect/landmark/ert_spawns/distress/hunt_spawner/pred
 	shuttle_id = ""
 

@@ -13,7 +13,6 @@ const PAGES = {
   login: () => Login,
   main: () => MainMenu,
   vents: () => SecVents,
-  printer: () => Printer,
 };
 
 type Data = {
@@ -30,9 +29,6 @@ type Data = {
   cell_flash_cooldown: number;
   sec_flash_cooldown: number;
   security_vents: VentRecord[];
-  restricted_camera: BooleanLike;
-  printer_cooldown: BooleanLike;
-  available_documents: string[];
 };
 
 export const WYComputer = (props) => {
@@ -104,7 +100,7 @@ const Login = (props) => {
       <Box mb="2rem" fontFamily="monospace">
         WY-DOS Executive
       </Box>
-      <Box fontFamily="monospace">Version 1.3.8</Box>
+      <Box fontFamily="monospace">Version 1.3.7</Box>
       <Box fontFamily="monospace">Copyright © 2182, Weyland Yutani Corp.</Box>
 
       <Button
@@ -137,8 +133,6 @@ const MainMenu = (props) => {
     open_cell_shutters,
     cell_flash_cooldown,
     sec_flash_cooldown,
-    restricted_camera,
-    printer_cooldown,
   } = data;
 
   return (
@@ -182,27 +176,6 @@ const MainMenu = (props) => {
 
       <Section>
         <h1 style={{ textAlign: 'center' }}>Navigation Menu</h1>
-        {access_level >= 2 && (
-          <Stack>
-            <Stack.Item grow>
-              <h3>Intranet Tier 2</h3>
-            </Stack.Item>
-            <Stack.Item>
-              <Button
-                tooltip="Access the document printer."
-                icon="paper"
-                ml="auto"
-                px="2rem"
-                width="100%"
-                bold
-                onClick={() => act('page_printer')}
-                disabled={printer_cooldown}
-              >
-                Document Printer
-              </Button>
-            </Stack.Item>
-          </Stack>
-        )}
 
         {access_level >= 4 && (
           <Stack>
@@ -273,21 +246,6 @@ const MainMenu = (props) => {
               Nerve Gas Control
             </Button>
           )}
-          {!restricted_camera && (
-            <Button
-              align="center"
-              tooltip="Open the available intranet camera feeds."
-              icon="camera"
-              color="yellow"
-              ml="auto"
-              px="2rem"
-              width="100%"
-              bold
-              onClick={() => act('open_cameras')}
-            >
-              Access Camera Feed
-            </Button>
-          )}
         </Section>
       )}
       {(access_level === 3 || access_level >= 5) && !!has_hidden_cell && (
@@ -351,21 +309,6 @@ const MainMenu = (props) => {
           >
             Cell Flash
           </Button.Confirm>
-          {!!restricted_camera && (
-            <Button
-              align="center"
-              tooltip="Open the available intranet camera feeds."
-              icon="camera"
-              color="yellow"
-              ml="auto"
-              px="2rem"
-              width="100%"
-              bold
-              onClick={() => act('open_cameras')}
-            >
-              Access Camera Feed
-            </Button>
-          )}
         </Section>
       )}
     </>
@@ -440,80 +383,6 @@ const SecVents = (props) => {
               onClick={() => act('trigger_vent', { vent: vent.ref })}
             >
               {vent.vent_tag}
-            </Button.Confirm>
-          );
-        })}
-      </Section>
-    </>
-  );
-};
-
-const Printer = (props) => {
-  const { data, act } = useBackend<Data>();
-  const {
-    logged_in,
-    access_text,
-    last_page,
-    current_menu,
-    available_documents,
-    printer_cooldown,
-  } = data;
-
-  return (
-    <>
-      <Section>
-        <Flex align="center">
-          <Box>
-            <Button
-              icon="arrow-left"
-              px="2rem"
-              textAlign="center"
-              tooltip="Go back"
-              onClick={() => act('go_back')}
-              disabled={last_page === current_menu}
-            />
-            <Button
-              icon="house"
-              ml="auto"
-              mr="1rem"
-              tooltip="Navigation Menu"
-              onClick={() => act('home')}
-              disabled={current_menu === 'main'}
-            />
-          </Box>
-
-          <h3>
-            {logged_in}, {access_text}
-          </h3>
-
-          <Button.Confirm
-            icon="circle-user"
-            ml="auto"
-            px="2rem"
-            bold
-            onClick={() => act('logout')}
-          >
-            Logout
-          </Button.Confirm>
-        </Flex>
-      </Section>
-
-      <Section>
-        <h1 style={{ textAlign: 'center' }}>Document Printer Library</h1>
-      </Section>
-      <Section>
-        {available_documents.map((document, i) => {
-          return (
-            <Button.Confirm
-              key={i}
-              align="center"
-              icon="printer"
-              tooltip="Print this document."
-              width="100%"
-              disabled={printer_cooldown}
-              onClick={() => act('print_document', { document_name: document })}
-            >
-              {document}
             </Button.Confirm>
           );
         })}

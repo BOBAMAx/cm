@@ -13,17 +13,15 @@
 	return FALSE
 
 /mob/living/carbon/xenomorph/proc/can_destroy_special()
-	if(!hive)
-		return FALSE
-	if(isqueen(src))
-		if(HAS_FLAG(hive.hive_flags, XENO_DECONSTRUCTION_QUEEN))
+	if(hive)
+		if(IS_XENO_LEADER(src))
+			if(hive.destruction_allowed == NORMAL_XENO || hive.destruction_allowed == XENO_LEADER)
+				return TRUE
+		if(hive.destruction_allowed == NORMAL_XENO && isxeno_builder(src))
 			return TRUE
-	else if(IS_XENO_LEADER(src))
-		if(HAS_FLAG(hive.hive_flags, XENO_DECONSTRUCTION_LEADERS))
+		if(isqueen(src))
 			return TRUE
-	else if(isxeno_builder(src))
-		if(HAS_FLAG(hive.hive_flags, XENO_DECONSTRUCTION_NORMAL))
-			return TRUE
+
 	return FALSE
 
 /mob/living/carbon/xenomorph/proc/get_plasma_percentage()

@@ -154,6 +154,7 @@
 		ui.open()
 
 /obj/structure/machinery/computer/med_data/proc/gather_record_data(mob/user, datum/data/record/general)
+
 	if(!general)
 		return
 
@@ -167,14 +168,12 @@
 
 	if(target_ref)
 		target = target_ref.resolve()
-		if(target)	// null if the target has been gibbed, or no longer physically exists
-			id = target.get_idcard()
-			// checks if record target is in the chain of command, and needs their record protected
-			if(target.job in CHAIN_OF_COMMAND_ROLES)
-				record_classified = TRUE
-
-	if(!record_classified && (general.fields["rank"] in CHAIN_OF_COMMAND_ROLES))
-		record_classified = TRUE
+		if(!target)	// if the target has been gibbed, or no longer physically exists
+			return
+		id = target.get_idcard()
+		// checks if record target is in the chain of command, and needs their record protected
+		if(target.job in CHAIN_OF_COMMAND_ROLES)
+			record_classified = TRUE
 
 	var/paygrade = id ? id.paygrade : "None"
 

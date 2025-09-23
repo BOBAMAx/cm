@@ -212,8 +212,6 @@
 /obj/item/explosive/grenade/high_explosive/upp,
 /obj/item/explosive/grenade/high_explosive/upp,
 /obj/item/explosive/grenade/high_explosive/upp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/weapon/gun/pkp,
 /turf/open/floor/almayer/no_build/plating,
 /area/strata/interior/supply_shuttle_sof)
 "iS" = (
@@ -263,10 +261,10 @@
 /obj/item/ammo_magazine/rifle/ak4047,
 /obj/item/ammo_magazine/rifle/ak4047,
 /obj/item/ammo_magazine/rifle/ak4047,
+/obj/item/ammo_magazine/rifle/ak4047,
 /obj/effect/decal/warning_stripes{
 	icon_state = "test_square_red"
 	},
-/obj/item/ammo_magazine/rifle/ak4047/ap,
 /turf/open/floor/almayer/no_build/plating,
 /area/strata/interior/supply_shuttle_sof)
 "kf" = (

@@ -58,10 +58,6 @@
 				if("Team")
 					marine_rk = "soctl_a"
 
-			current_human.langchat_styles = "langchat_bolded" // bold text for bold leaders
-		else
-			current_human.langchat_styles = initial(current_human.langchat_styles)
-
 		current_human.langchat_color = current_human.assigned_squad.chat_color
 
 		if(!marine_rk)
@@ -131,7 +127,12 @@
 				marine_rk = "cmp"
 				border_rk = "command"
 			if(JOB_POLICE)
-				marine_rk = "mp"
+				if(current_human.rank_fallback == "hgmp")
+					marine_rk = "hgmp"
+				else
+					marine_rk = "mp"
+			if(JOB_POLICE_HG)
+				marine_rk = "hgmp"
 			if(JOB_TANK_CREW)
 				marine_rk = "tc"
 			if(JOB_WARDEN)
@@ -167,6 +168,9 @@
 				border_rk = "command"
 			if(JOB_SYNTH)
 				marine_rk = "syn"
+				var/datum/equipment_preset/synth/preset = current_human.assigned_equipment_preset
+				if(preset?.subtype)
+					marine_rk = "syn_[preset.subtype]"
 			if(JOB_SYNTH_K9)
 				marine_rk = "syn_k9"
 			if(JOB_MESS_SERGEANT)

@@ -15,6 +15,7 @@
 	var/junction = 0 //Because everything is terrible, I'm making this a fence-level var
 	var/basestate = "fence"
 	var/forms_junctions = TRUE
+	var/form_junctions_to = TRUE
 
 /obj/structure/fence/initialize_pass_flags(datum/pass_flags_container/PF)
 	..()
@@ -238,7 +239,7 @@
 		if(!src)
 			return
 		for(var/obj/structure/fence/fence in orange(src, 1))
-			if(!fence.forms_junctions)
+			if(!fence.form_junctions_to)
 				continue
 			if(abs(x - fence.x) - abs(y - fence.y)) //Doesn't count grilles, placed diagonally to src
 				junction |= get_dir(src, fence)
@@ -268,6 +269,7 @@ GLOBAL_LIST_INIT(all_electric_fences, list())
 	health = 150
 	health_max = 200
 	forms_junctions = FALSE
+	form_junctions_to = FALSE
 	var/electrified = FALSE
 	var/obj/structure/machinery/colony_floodlight_switch/electrified_fence_switch/breaker_switch = null
 
@@ -297,8 +299,8 @@ GLOBAL_LIST_INIT(all_electric_fences, list())
 		else
 			icon_state = "[basestate]_off"
 
-/obj/structure/fence/electrified/proc/toggle_power()
-	electrified = !electrified
+/obj/structure/fence/electrified/proc/set_is_on(is_on)
+	electrified = is_on
 	update_icon()
 
 /obj/structure/fence/electrified/Initialize()

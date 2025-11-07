@@ -232,24 +232,24 @@
 /datum/action/item_action/smartgun/toggle_motion_detector/New(Target, obj/item/holder)
 	. = ..()
 	name = "Toggle Motion Detector"
-	action_icon_state = "motion_detector"
 	button.name = name
-	button.overlays.Cut()
-	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
 
 /datum/action/item_action/smartgun/toggle_motion_detector/action_activate()
 	. = ..()
 	var/obj/item/weapon/gun/smartgun/G = holder_item
 	G.toggle_motion_detector(usr)
 
-/datum/action/item_action/smartgun/toggle_motion_detector/proc/update_icon()
+/datum/action/item_action/smartgun/toggle_motion_detector/update_button_icon()
 	if(!holder_item)
 		return
 	var/obj/item/weapon/gun/smartgun/G = holder_item
 	if(G.motion_detector)
-		button.icon_state = "template_on"
+		action_icon_state = "motion_detector_off"
 	else
-		button.icon_state = "template"
+		action_icon_state = "motion_detector"
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+
 
 /datum/action/item_action/smartgun/toggle_auto_fire/New(Target, obj/item/holder)
 	. = ..()
@@ -269,9 +269,34 @@
 		return
 	var/obj/item/weapon/gun/smartgun/G = holder_item
 	if(G.auto_fire)
-		button.icon_state = "template_on"
+		action_icon_state = "autofire_off"
 	else
-		button.icon_state = "template"
+		action_icon_state = "autofire"
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+
+/datum/action/item_action/smartgun/toggle_aim_assist/New(Target, obj/item/holder)
+	. = ..()
+	name = "Toggle Aim Assist"
+
+	update_icon()
+	button.name = name
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+
+/datum/action/item_action/smartgun/toggle_aim_assist/action_activate()
+	. = ..()
+	var/obj/item/weapon/gun/smartgun/smortgun = holder_item
+	smortgun.toggle_aim_assist(usr)
+
+/datum/action/item_action/smartgun/toggle_aim_assist/proc/update_icon()
+	if(!holder_item)
+		return
+	var/obj/item/weapon/gun/smartgun/smortgun = holder_item
+	if(smortgun.aim_assist)
+		action_icon_state = "aimassist"
+	else
+		action_icon_state = "aimassist_off"
 
 /datum/action/item_action/smartgun/toggle_accuracy_improvement/New(Target, obj/item/holder)
 	. = ..()
@@ -286,9 +311,11 @@
 	var/obj/item/weapon/gun/smartgun/G = holder_item
 	G.toggle_accuracy_improvement(usr)
 	if(G.accuracy_improvement)
-		button.icon_state = "template_on"
+		action_icon_state = "accuracy_improvement_off"
 	else
-		button.icon_state = "template"
+		action_icon_state = "accuracy_improvement"
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
 
 /datum/action/item_action/smartgun/toggle_recoil_compensation/New(Target, obj/item/holder)
 	. = ..()
@@ -303,9 +330,11 @@
 	var/obj/item/weapon/gun/smartgun/G = holder_item
 	G.toggle_recoil_compensation(usr)
 	if(G.recoil_compensation)
-		button.icon_state = "template_on"
+		action_icon_state = "recoil_compensation_off"
 	else
-		button.icon_state = "template"
+		action_icon_state = "recoil_compensation"
+	button.overlays.Cut()
+	button.overlays += image ('icons/mob/hud/actions.dmi', button, action_icon_state)
 
 /datum/action/item_action/smartgun/toggle_frontline_mode/New(Target, obj/item/holder)
 	. = ..()
@@ -646,7 +675,7 @@
 	playsound(loc,'sound/machines/click.ogg', 25, 1)
 	motion_detector = !motion_detector
 	var/datum/action/item_action/smartgun/toggle_motion_detector/TMD = locate(/datum/action/item_action/smartgun/toggle_motion_detector) in actions
-	TMD.update_icon()
+	TMD.update_button_icon()
 	motion_detector()
 
 /obj/item/weapon/gun/smartgun/proc/motion_detector()
@@ -756,9 +785,62 @@
 	SIGNAL_HANDLER
 	linked_human = null
 
-/obj/item/weapon/gun/smartgun/dirty
-	name = "\improper M56D 'Dirty' smartgun"
-	desc = "The actual firearm in the 4-piece M56D Smartgun System. If you have this, you're about to bring some serious pain to anyone in your way.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
+//TERMINATOR SMARTGUN
+/obj/item/weapon/gun/smartgun/terminator
+	name = "\improper M57R 'Terminator' smartgun"
+	desc = "The actual experimental firearm in the 4-piece M57R Smartgun System. Essentially a heavy, mobile machinegun. This one looks slightly outdated, but far more menacing."
+	icon_state = "m50r"
+	item_state = "m50r"
+	can_change_ammo = FALSE //Only one ammo type, no toggling.
+	current_mag = /obj/item/ammo_magazine/smartgun/heap
+	ammo_primary_def = /datum/ammo/bullet/smartgun/heap
+	actions_types = list(
+		/datum/action/item_action/smartgun/toggle_accuracy_improvement,
+		/datum/action/item_action/smartgun/toggle_frontline_mode,
+		/datum/action/item_action/smartgun/toggle_aim_assist,
+		/datum/action/item_action/smartgun/toggle_lethal_mode,
+		/datum/action/item_action/smartgun/toggle_motion_detector,
+		/datum/action/item_action/smartgun/toggle_recoil_compensation,
+	)
+
+/obj/item/weapon/gun/smartgun/terminator/Initialize(mapload, ...)
+	. = ..()
+	toggle_aim_assist(null, TRUE)
+
+/obj/item/weapon/gun/smartgun/terminator/low_threat
+	current_mag = /obj/item/ammo_magazine/smartgun
+	ammo_primary_def = /datum/ammo/bullet/smartgun
+
+/obj/item/weapon/gun/smartgun/l56a2
+	name = "\improper L56A2 smartgun"
+	desc = "The actual firearm in the 4-piece L56A2 Smartgun System. If you have this, you're about to bring some serious pain to anyone in your way."
+	desc_lore = "Originally produced for the Three World Empires Royal Marines forces, it mostly ended up in hands of W-Y PMCs and other affiliated forces, with Three World Empire giving preference for other design, that is still produced by W-Y regardless. Compared to more commonly used M56A2, it has improved recoil control, better electronics and advanced tracking software."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/WY/machineguns.dmi'
+	icon_state = "l56d"
+	item_state = "l56d"
+	flags_gun_features = GUN_WY_RESTRICTED|GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY
+	drum_cover_overlay = FALSE
+	gun_faction = FACTION_PMC
+	has_cover = FALSE
+	actions_types = list(
+		/datum/action/item_action/smartgun/toggle_accuracy_improvement,
+		/datum/action/item_action/smartgun/toggle_ammo_type,
+		/datum/action/item_action/smartgun/toggle_aim_assist,
+		/datum/action/item_action/smartgun/toggle_frontline_mode,
+		/datum/action/item_action/smartgun/toggle_lethal_mode,
+		/datum/action/item_action/smartgun/toggle_motion_detector,
+		/datum/action/item_action/smartgun/toggle_recoil_compensation,
+	)
+
+/obj/item/weapon/gun/smartgun/l56a2/Initialize(mapload, ...)
+	. = ..()
+	toggle_aim_assist(null, TRUE)
+	AddElement(/datum/element/corp_label/wy)
+
+/obj/item/weapon/gun/smartgun/l56a2/elite
+	name = "\improper L56A2D 'Dirty' smartgun"
+	desc = "The actual firearm in the 4-piece L56A2D Smartgun System. If you have this, you're about to bring some serious pain to anyone in your way."
+	desc_lore = "Essentially a reuse of a proof of concept originally made as M57D, utilizing depleted uranium rounds, this one reuses same ideas on a basis of a more robust L56A2 smartgun."
 	current_mag = /obj/item/ammo_magazine/smartgun/dirty
 	ammo = /obj/item/ammo_magazine/smartgun/dirty
 	ammo_primary //Toggled ammo type
@@ -852,6 +934,25 @@
 	. = ..()
 	MD.iff_signal = FACTION_TWE
 
+/obj/item/weapon/gun/smartgun/rmc/Initialize()
+	. = ..()
+	AddElement(/datum/element/corp_label/wy)
+
+/obj/item/weapon/gun/smartgun/upp
+	name = "\improper RFVS37 smartgun"
+	desc = "The actual firearm in the 2-piece RFVS37 Smartgun System. This experimental variant is used by the Union of Progressive Peoples units."
+	desc_lore = "Seeing the successful use of the M56 and L56 by the UA and 3WE Militaries during military conflicts such as the linna 349 campaign and the the australia wars, the UPP SOF saw a need for a similar self aiming LMG for their own units, following extensive trials the NORCOMM RFVS-37 was chosen, fulfilling all of the SOF's criteria."
+	flags_gun_features = GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/UPP/machineguns.dmi'
+	icon_state = "rfvs37"
+	item_state = "rfvs37"
+	current_mag = /obj/item/ammo_magazine/smartgun/upp
+	mouse_pointer = 'icons/effects/mouse_pointer/upp_smartgun_mouse.dmi'
+	gun_faction = FACTION_UPP
+
+/obj/item/weapon/gun/smartgun/upp/Initialize()
+	. = ..()
+	AddElement(/datum/element/corp_label/norcomm)
 
 //  Solar devils SG, frontline mode only
 

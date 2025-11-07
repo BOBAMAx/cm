@@ -1142,7 +1142,7 @@
 /turf/open/floor/strata/orange_cover,
 /area/strata/interior/parts_storage)
 "adt" = (
-/obj/structure/reagent_dispensers/fueltank,
+/obj/structure/reagent_dispensers/tank/fuel,
 /turf/open/floor/wood,
 /area/strata/interior/wooden_ruins)
 "adu" = (
@@ -1158,7 +1158,7 @@
 /turf/open/gm/dirt/brown,
 /area/strata/exterior/landing_zones/near_lz2)
 "adw" = (
-/obj/structure/reagent_dispensers/watertank,
+/obj/structure/reagent_dispensers/tank/water,
 /turf/open/floor/wood/wood_broken2,
 /area/strata/interior/wooden_ruins)
 "adx" = (
@@ -2391,18 +2391,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/strata/interior/research)
-"ahg" = (
-/obj/effect/decal/strata_decals/mud_corner{
-	dir = 5
-	},
-/obj/effect/decal/strata_decals/mud_corner{
-	dir = 6
-	},
-/obj/effect/decal/strata_decals/mud_corner{
-	dir = 9
-	},
-/turf/open/gm/dirt/brown,
-/area/strata/exterior/parts_storage_exterior)
 "ahh" = (
 /turf/open/floor/almayer/plate,
 /area/strata/interior/research)
@@ -2751,10 +2739,6 @@
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/exterior/deep_jungle/old_tunnels)
-"aih" = (
-/obj/structure/sign/safety/storage,
-/turf/closed/wall/strata_outpost/reinforced,
-/area/strata/exterior/parts_storage_exterior)
 "aii" = (
 /obj/structure/machinery/computer/communications,
 /obj/structure/surface/table/reinforced/prison{
@@ -2936,6 +2920,18 @@
 /obj/structure/sign/safety/fridge,
 /turf/closed/wall/strata_outpost/reinforced,
 /area/strata/interior/mining_outpost/canteen)
+"aiI" = (
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 5
+	},
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 6
+	},
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 9
+	},
+/turf/open/gm/dirt/brown,
+/area/strata/exterior/parts_storage_exterior)
 "aiJ" = (
 /obj/structure/bed{
 	icon_state = "abed"
@@ -3564,7 +3560,7 @@
 /turf/open/gm/dirt/brown,
 /area/strata/exterior/landing_zones/near_lz2)
 "akt" = (
-/obj/structure/reagent_dispensers/fueltank,
+/obj/structure/reagent_dispensers/tank/fuel,
 /obj/structure/machinery/light/small{
 	dir = 4
 	},
@@ -3614,6 +3610,10 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/strata/interior/mining_outpost/maintenance)
+"akB" = (
+/obj/structure/sign/safety/storage,
+/turf/closed/wall/strata_outpost/reinforced,
+/area/strata/exterior/parts_storage_exterior)
 "akC" = (
 /obj/effect/decal/strata_decals/mud_corner{
 	dir = 5
@@ -3712,7 +3712,7 @@
 /turf/open/floor/plating,
 /area/strata/interior/research)
 "akP" = (
-/obj/structure/reagent_dispensers/fueltank,
+/obj/structure/reagent_dispensers/tank/fuel,
 /obj/structure/machinery/light/small{
 	dir = 1
 	},
@@ -3732,7 +3732,7 @@
 /turf/open/floor/plating,
 /area/strata/interior/research)
 "akT" = (
-/obj/structure/reagent_dispensers/fueltank,
+/obj/structure/reagent_dispensers/tank/fuel,
 /turf/open/floor/plating,
 /area/strata/interior/research)
 "akU" = (
@@ -3946,7 +3946,7 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/strata/exterior/deep_jungle/tearlake)
 "alu" = (
-/obj/structure/reagent_dispensers/watertank,
+/obj/structure/reagent_dispensers/tank/water,
 /turf/open/floor/strata/floor3/east,
 /area/strata/interior/parts_storage)
 "alw" = (
@@ -4078,6 +4078,15 @@
 /obj/structure/pipes/vents/pump/on,
 /turf/open/floor/strata/floor3/east,
 /area/strata/interior/outpost/med)
+"alR" = (
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/machinery/power/power_generator/port_gen/pacman,
+/turf/closed/wall/strata_ice/jungle,
+/area/strata/interior/out_of_bounds)
 "alS" = (
 /obj/effect/decal/strata_decals/mud_corner{
 	dir = 5
@@ -5065,9 +5074,6 @@
 /obj/structure/platform/metal/strata/north,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/strata/exterior/restricted)
-"aoB" = (
-/turf/open/asphalt/cement/cement14,
-/area/strata/exterior/south_outpost)
 "aoC" = (
 /obj/structure/surface/table/reinforced/prison{
 	color = "#98a3ab"
@@ -5239,7 +5245,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/strata/interior/research)
 "aoW" = (
-/obj/structure/reagent_dispensers/watertank,
+/obj/structure/reagent_dispensers/tank/water,
 /obj/structure/machinery/light{
 	dir = 1
 	},
@@ -5534,6 +5540,9 @@
 	},
 /turf/open/floor/strata/floor2,
 /area/strata/interior/research)
+"apP" = (
+/turf/open/asphalt/cement/cement14,
+/area/strata/exterior/south_outpost)
 "apQ" = (
 /obj/structure/platform/stone/soro/north,
 /obj/structure/platform/stone/soro/west,
@@ -5668,7 +5677,7 @@
 /turf/closed/wall/strata_outpost/reinforced,
 /area/strata/interior/mining_outpost)
 "aqh" = (
-/obj/structure/machinery/power/port_gen/pacman/super,
+/obj/structure/machinery/power/power_generator/port_gen/pacman/super,
 /turf/open/floor/strata/orange_cover,
 /area/strata/interior/mining_outpost)
 "aqi" = (
@@ -5711,15 +5720,6 @@
 /obj/structure/sign/nosmoking_1,
 /turf/closed/wall/strata_outpost/reinforced,
 /area/strata/interior/checkpoints/north_armor)
-"aqq" = (
-/obj/effect/decal/strata_decals/mud_corner{
-	dir = 9
-	},
-/obj/effect/decal/strata_decals/mud_corner{
-	dir = 5
-	},
-/turf/open/gm/dirt/brown/variant_2,
-/area/strata/exterior/parts_storage_exterior)
 "aqr" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/cleanable/blood,
@@ -5970,12 +5970,6 @@
 /obj/item/storage/box/cups,
 /turf/open/floor/strata/floor3,
 /area/strata/interior/research)
-"aqX" = (
-/obj/structure/flora/bush/ausbushes/var3/sparsegrass{
-	pixel_x = 13
-	},
-/turf/open/auto_turf/strata_grass/layer0_mud,
-/area/strata/exterior/parts_storage_exterior)
 "aqY" = (
 /obj/structure/machinery/door/airlock/almayer/maint/colony{
 	dir = 2
@@ -6038,7 +6032,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/strata/interior/mining_outpost)
 "ari" = (
-/obj/structure/machinery/power/port_gen/pacman/super,
+/obj/structure/machinery/power/power_generator/port_gen/pacman/super,
 /turf/open/floor/prison/floor_plate,
 /area/strata/interior/mining_outpost)
 "arj" = (
@@ -6072,6 +6066,21 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/strata/exterior/marsh/relay_marshes)
+"arp" = (
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 9
+	},
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 5
+	},
+/turf/open/gm/dirt/brown/variant_2,
+/area/strata/exterior/parts_storage_exterior)
+"arq" = (
+/obj/structure/flora/bush/ausbushes/var3/sparsegrass{
+	pixel_x = 13
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/strata/exterior/parts_storage_exterior)
 "ars" = (
 /obj/structure/surface/rack{
 	color = "#98a3ab"
@@ -6543,16 +6552,6 @@
 	},
 /turf/open/gm/river/soro,
 /area/strata/exterior/marsh/water)
-"asD" = (
-/obj/item/lightstick/planted,
-/obj/structure/prop/colorable_rock/colorable{
-	color = "#9d7766";
-	dir = 8;
-	pixel_y = 4;
-	pixel_x = 2
-	},
-/turf/open/gm/dirt/brown/variant_2,
-/area/strata/exterior/parts_storage_exterior)
 "asE" = (
 /obj/effect/blocker/sorokyne_hot_water,
 /obj/structure/platform/stone/soro/west,
@@ -6821,7 +6820,7 @@
 /turf/open/floor/strata/floor2,
 /area/strata/interior/research)
 "atj" = (
-/obj/structure/reagent_dispensers/watertank,
+/obj/structure/reagent_dispensers/tank/water,
 /turf/open/asphalt/cement/cement2,
 /area/strata/interior/research)
 "atk" = (
@@ -6829,7 +6828,7 @@
 /turf/open/asphalt/cement/cement4,
 /area/strata/interior/research)
 "atl" = (
-/obj/structure/reagent_dispensers/fueltank,
+/obj/structure/reagent_dispensers/tank/fuel,
 /turf/open/asphalt/cement/cement9,
 /area/strata/interior/research)
 "atm" = (
@@ -7123,7 +7122,7 @@
 /turf/open/floor/strata/fake_wood,
 /area/strata/interior/research)
 "auf" = (
-/obj/structure/reagent_dispensers/watertank,
+/obj/structure/reagent_dispensers/tank/water,
 /turf/open/asphalt/cement/cement14,
 /area/strata/interior/research)
 "aug" = (
@@ -7131,7 +7130,7 @@
 /turf/open/asphalt/cement/cement12,
 /area/strata/interior/research)
 "auh" = (
-/obj/structure/reagent_dispensers/fueltank,
+/obj/structure/reagent_dispensers/tank/fuel,
 /turf/open/asphalt/cement/cement15,
 /area/strata/interior/research)
 "aui" = (
@@ -7467,6 +7466,16 @@
 /obj/structure/barricade/handrail/strata,
 /turf/open/asphalt/cement/cement15,
 /area/strata/exterior/deep_jungle/old_tunnels)
+"avg" = (
+/obj/item/lightstick/planted,
+/obj/structure/prop/colorable_rock/colorable{
+	color = "#9d7766";
+	dir = 8;
+	pixel_y = 4;
+	pixel_x = 2
+	},
+/turf/open/gm/dirt/brown/variant_2,
+/area/strata/exterior/parts_storage_exterior)
 "avh" = (
 /obj/structure/platform_decoration/stone/soro,
 /obj/effect/blocker/sorokyne_hot_water,
@@ -9146,7 +9155,7 @@
 /turf/closed/wall/strata_outpost,
 /area/strata/interior/mining_outpost)
 "azP" = (
-/obj/structure/reagent_dispensers/watertank,
+/obj/structure/reagent_dispensers/tank/water,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/light/small{
 	dir = 1
@@ -9187,7 +9196,7 @@
 /turf/open/floor/strata/floor3,
 /area/strata/interior/research)
 "azV" = (
-/obj/structure/reagent_dispensers/fueltank,
+/obj/structure/reagent_dispensers/tank/fuel,
 /turf/open/floor/strata/floor3/east,
 /area/strata/exterior/outpost_decks)
 "azW" = (
@@ -9698,7 +9707,7 @@
 /area/strata/interior/mining_outpost)
 "aBu" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
-/obj/structure/reagent_dispensers/fueltank,
+/obj/structure/reagent_dispensers/tank/fuel,
 /turf/open/floor/greengrid,
 /area/strata/interior/mining_outpost)
 "aBv" = (
@@ -9709,7 +9718,7 @@
 /turf/open/floor/greengrid,
 /area/strata/interior/mining_outpost)
 "aBw" = (
-/obj/structure/reagent_dispensers/watertank,
+/obj/structure/reagent_dispensers/tank/water,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/greengrid,
 /area/strata/interior/mining_outpost)
@@ -9888,7 +9897,7 @@
 /turf/open/floor/strata/cyan2/east,
 /area/strata/interior/mining_outpost/canteen)
 "aCa" = (
-/obj/structure/reagent_dispensers/fueltank,
+/obj/structure/reagent_dispensers/tank/fuel,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/strata/interior/outpost/engi)
 "aCb" = (
@@ -10778,14 +10787,14 @@
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/strata/interior/outpost/engi)
 "aEX" = (
-/obj/structure/reagent_dispensers/watertank,
+/obj/structure/reagent_dispensers/tank/water,
 /obj/structure/machinery/light{
 	dir = 8
 	},
 /turf/open/floor/strata,
 /area/strata/exterior/outpost_decks)
 "aEY" = (
-/obj/structure/reagent_dispensers/watertank,
+/obj/structure/reagent_dispensers/tank/water,
 /turf/open/floor/strata,
 /area/strata/interior/outpost/engi)
 "aEZ" = (
@@ -11579,7 +11588,7 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/exterior/north_outpost)
 "aHi" = (
-/obj/structure/reagent_dispensers/fueltank,
+/obj/structure/reagent_dispensers/tank/fuel,
 /obj/structure/barricade/handrail/strata,
 /turf/open/asphalt/cement/cement15,
 /area/strata/exterior/outpost_platform)
@@ -13071,7 +13080,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/obj/item/device/defibrillator/synthetic,
+/obj/item/device/defibrillator/synthetic/hyperdyne,
 /turf/open/floor/strata,
 /area/strata/interior/outpost/engi)
 "aLH" = (
@@ -16545,13 +16554,6 @@
 /obj/structure/platform_decoration/metal/strata/west,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/exterior/outpost_platform)
-"aVv" = (
-/obj/structure/machinery/weather_siren{
-	pixel_x = 10;
-	pixel_y = -8
-	},
-/turf/closed/wall/strata_outpost/reinforced,
-/area/strata/interior/out_of_bounds)
 "aVw" = (
 /obj/structure/platform/metal/strata/north,
 /turf/open/auto_turf/strata_grass/layer1,
@@ -16778,6 +16780,13 @@
 /obj/item/lightstick/planted,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/exterior/marsh/river)
+"aWg" = (
+/obj/structure/machinery/weather_siren{
+	pixel_x = 10;
+	pixel_y = -8
+	},
+/turf/closed/wall/strata_outpost/reinforced,
+/area/strata/interior/out_of_bounds)
 "aWh" = (
 /obj/structure/prop/colorable_rock/colorable{
 	color = "#9d7766";
@@ -18545,10 +18554,6 @@
 	},
 /turf/open/floor/strata,
 /area/strata/exterior/outpost_decks)
-"bbJ" = (
-/obj/structure/platform_decoration/stone/soro,
-/turf/open/auto_turf/strata_grass/layer1,
-/area/strata/exterior/flight_control_exterior)
 "bbK" = (
 /obj/structure/machinery/light/small{
 	dir = 1
@@ -18569,6 +18574,10 @@
 "bbN" = (
 /turf/open/floor/strata/floor2,
 /area/strata/interior/underground_dorms/admin4)
+"bbO" = (
+/obj/structure/platform_decoration/stone/soro,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/strata/exterior/flight_control_exterior)
 "bbP" = (
 /obj/structure/machinery/door/airlock/almayer/generic/glass/rusted_window,
 /turf/open/floor/strata/multi_tiles/west,
@@ -21318,10 +21327,6 @@
 	},
 /turf/open/gm/dirt/brown,
 /area/strata/exterior/deep_jungle/carplake_east)
-"bkH" = (
-/obj/structure/fence/dark,
-/turf/open/auto_turf/strata_grass/layer0_mud,
-/area/strata/exterior/marsh/spring_marshes)
 "bkI" = (
 /obj/structure/flora/bush/ausbushes/var3/sparsegrass{
 	pixel_x = 11;
@@ -21390,6 +21395,10 @@
 "bkS" = (
 /turf/closed/wall/strata_ice/rock,
 /area/strata/exterior/lz_caves)
+"bkT" = (
+/obj/structure/fence/dark,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/strata/exterior/marsh/spring_marshes)
 "bkU" = (
 /obj/effect/decal/strata_decals/mud_corner{
 	dir = 9
@@ -23487,7 +23496,7 @@
 /turf/open/gm/coast/dirt/beachcorner/south_east,
 /area/strata/exterior/carplake_center)
 "brX" = (
-/obj/structure/reagent_dispensers/fueltank,
+/obj/structure/reagent_dispensers/tank/fuel,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/exterior/south_outpost)
 "brY" = (
@@ -23610,7 +23619,7 @@
 /turf/open/gm/dirt/brown,
 /area/strata/exterior/deep_jungle/hot_springs)
 "bss" = (
-/obj/structure/reagent_dispensers/fueltank,
+/obj/structure/reagent_dispensers/tank/fuel,
 /turf/open/floor/strata/floor3/east,
 /area/strata/interior/parts_storage)
 "bst" = (
@@ -23760,7 +23769,7 @@
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/strata/interior/outpost/engi/drome)
 "bsP" = (
-/obj/structure/reagent_dispensers/watertank,
+/obj/structure/reagent_dispensers/tank/water,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/exterior/south_outpost)
 "bsQ" = (
@@ -24357,6 +24366,22 @@
 	},
 /turf/open/gm/dirt/brown,
 /area/strata/exterior/lz_caves)
+"buN" = (
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/machinery/power/power_generator/port_gen/pacman/super,
+/obj/structure/sign/poster/upp{
+	pixel_y = 33
+	},
+/obj/structure/sign/poster/safety{
+	pixel_x = 10;
+	pixel_y = 31
+	},
+/turf/closed/wall/strata_ice/rock,
+/area/strata/interior/out_of_bounds)
 "buO" = (
 /obj/structure/pipes/standard/simple/hidden/cyan,
 /turf/open/floor/strata,
@@ -24494,6 +24519,18 @@
 	},
 /turf/open/gm/dirt/brown/variant_5/east,
 /area/strata/exterior/lz_caves)
+"bvn" = (
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/machinery/power/power_generator/port_gen/pacman/super,
+/obj/structure/machinery/light/small{
+	dir = 1
+	},
+/turf/closed/wall/strata_ice/rock,
+/area/strata/interior/out_of_bounds)
 "bvo" = (
 /obj/structure/flora/grass/tallgrass/jungle_alt/corner,
 /turf/open/gm/dirt/brown,
@@ -24706,7 +24743,7 @@
 /turf/open/gm/coast/dirt/beachcorner/north_east,
 /area/strata/exterior/carplake_center)
 "bwc" = (
-/obj/structure/reagent_dispensers/fueltank,
+/obj/structure/reagent_dispensers/tank/fuel,
 /turf/open/floor/strata,
 /area/strata/interior/outpost/engi/drome)
 "bwd" = (
@@ -25744,7 +25781,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/strata/interior/outpost/engi/drome)
 "bzo" = (
-/obj/structure/reagent_dispensers/fueltank,
+/obj/structure/reagent_dispensers/tank/fuel,
 /turf/open/floor/strata/floor3/east,
 /area/strata/interior/outpost/engi/drome)
 "bzp" = (
@@ -31264,7 +31301,7 @@
 /turf/open/floor/strata/white_cyan2/west,
 /area/strata/interior/research)
 "bPj" = (
-/obj/structure/machinery/power/port_gen/pacman/super,
+/obj/structure/machinery/power/power_generator/port_gen/pacman/super,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/exterior/restricted)
 "bPk" = (
@@ -32181,7 +32218,7 @@
 /turf/open/floor/strata/yellow3/west,
 /area/strata/interior/secure_checkpoint)
 "bRF" = (
-/obj/structure/reagent_dispensers/fueltank,
+/obj/structure/reagent_dispensers/tank/fuel,
 /turf/open/floor/strata/multi_tiles/west,
 /area/strata/interior/secure_checkpoint)
 "bRG" = (
@@ -32660,7 +32697,7 @@
 /turf/open/floor/carpet,
 /area/strata/exterior/restricted)
 "bSP" = (
-/obj/structure/machinery/power/port_gen/pacman,
+/obj/structure/machinery/power/power_generator/port_gen/pacman,
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/floor/strata/yellow3/west,
 /area/strata/interior/secure_checkpoint)
@@ -32870,7 +32907,7 @@
 /turf/closed/wall/strata_outpost/reinforced,
 /area/strata/exterior/restricted)
 "bTu" = (
-/obj/structure/machinery/power/port_gen/pacman,
+/obj/structure/machinery/power/power_generator/port_gen/pacman,
 /turf/open/floor/strata/yellow3/west,
 /area/strata/interior/secure_checkpoint)
 "bTv" = (
@@ -37747,7 +37784,7 @@
 /turf/open/floor/strata/red1,
 /area/strata/interior/mining_outpost)
 "ctF" = (
-/obj/structure/reagent_dispensers/fueltank,
+/obj/structure/reagent_dispensers/tank/fuel,
 /turf/open/floor/strata/orange_cover,
 /area/strata/interior/mining_outpost)
 "ctI" = (
@@ -38800,7 +38837,7 @@
 /turf/open/floor/strata/orange_cover,
 /area/strata/interior/outpost/engi/drome)
 "dCb" = (
-/obj/structure/machinery/power/reactor/colony,
+/obj/structure/machinery/power/power_generator/reactor/colony,
 /turf/open/floor/strata,
 /area/strata/interior/outpost/engi)
 "dCq" = (
@@ -38908,7 +38945,7 @@
 /turf/open/floor/prison/darkyellowfull2,
 /area/strata/interior/outpost/engi)
 "dLT" = (
-/obj/structure/reagent_dispensers/watertank,
+/obj/structure/reagent_dispensers/tank/water,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/strata/interior/outpost/engi)
 "dMg" = (
@@ -39181,7 +39218,7 @@
 /turf/open/floor/strata,
 /area/strata/interior/underground_dorms/admin3)
 "ebu" = (
-/obj/structure/machinery/power/port_gen/pacman/super,
+/obj/structure/machinery/power/power_generator/port_gen/pacman/super,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/strata/interior/bball_cave)
 "eco" = (
@@ -39391,7 +39428,7 @@
 /turf/open/floor/strata/multi_tiles,
 /area/strata/interior/mining_outpost/maintenance)
 "eqS" = (
-/obj/structure/reagent_dispensers/watertank,
+/obj/structure/reagent_dispensers/tank/water,
 /turf/open/floor/prison/darkyellowfull2,
 /area/strata/exterior/outpost_decks)
 "era" = (
@@ -40264,7 +40301,7 @@
 /turf/open/gm/river/soro,
 /area/strata/exterior/far_north_outpost)
 "fwi" = (
-/obj/structure/machinery/power/reactor/colony,
+/obj/structure/machinery/power/power_generator/reactor/colony,
 /turf/open/floor/prison/floor_plate,
 /area/strata/interior/mining_outpost)
 "fwq" = (
@@ -40949,7 +40986,7 @@
 /turf/open/floor/strata/multi_tiles/west,
 /area/strata/interior/outpost/med)
 "glG" = (
-/obj/structure/machinery/power/port_gen/pacman/super,
+/obj/structure/machinery/power/power_generator/port_gen/pacman/super,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/strata/interior/bball)
 "glN" = (
@@ -41318,7 +41355,7 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/strata/interior/bball_cave)
 "gOC" = (
-/obj/structure/machinery/power/reactor/colony,
+/obj/structure/machinery/power/power_generator/reactor/colony,
 /turf/open/floor/strata/floor3/east,
 /area/strata/interior/generator_substation)
 "gOF" = (
@@ -42012,6 +42049,12 @@
 /area/strata/interior/outpost/engi/drome)
 "hLf" = (
 /obj/structure/reagent_dispensers/fueltank,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/reagent_dispensers/tank/water,
 /turf/open/asphalt/cement,
 /area/strata/exterior/south_outpost)
 "hLX" = (
@@ -42502,7 +42545,7 @@
 /turf/open/floor/strata,
 /area/strata/interior/underground_dorms/sec1)
 "iqD" = (
-/obj/structure/reagent_dispensers/fueltank,
+/obj/structure/reagent_dispensers/tank/fuel,
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/strata/interior/mining_outpost)
 "iqY" = (
@@ -42749,7 +42792,7 @@
 /turf/closed/wall/strata_outpost,
 /area/strata/interior/underground_dorms/med1)
 "iGp" = (
-/obj/structure/machinery/power/reactor/colony,
+/obj/structure/machinery/power/power_generator/reactor/colony,
 /obj/structure/machinery/camera/autoname,
 /turf/open/floor/strata/floor3/east,
 /area/strata/interior/generator_substation)
@@ -43433,7 +43476,7 @@
 /turf/closed/wall/strata_ice/jungle,
 /area/strata/exterior/parts_storage_cave)
 "jBp" = (
-/obj/structure/machinery/power/reactor/colony,
+/obj/structure/machinery/power/power_generator/reactor/colony,
 /turf/open/floor/strata/floor3,
 /area/strata/interior/outpost/admin)
 "jBG" = (
@@ -45671,7 +45714,7 @@
 /turf/open/floor/strata/orange_cover,
 /area/strata/interior/parts_storage)
 "mBl" = (
-/obj/structure/reagent_dispensers/watertank,
+/obj/structure/reagent_dispensers/tank/water,
 /obj/structure/barricade/handrail/strata{
 	dir = 1
 	},
@@ -48003,7 +48046,7 @@
 /turf/open/gm/dirt/brown,
 /area/strata/exterior/parts_storage_cave)
 "pEY" = (
-/obj/structure/reagent_dispensers/fueltank,
+/obj/structure/reagent_dispensers/tank/fuel,
 /obj/structure/prop/hybrisa/misc/buildinggreebliessmall/smallvent2{
 	pixel_y = 25;
 	pixel_x = 22
@@ -48753,7 +48796,7 @@
 /turf/open/auto_turf/strata_grass/layer0,
 /area/strata/exterior/outpost_platform)
 "qDI" = (
-/obj/structure/machinery/power/reactor/colony,
+/obj/structure/machinery/power/power_generator/reactor/colony,
 /turf/open/floor/strata/floor3/east,
 /area/strata/interior/checkpoints/south)
 "qDM" = (
@@ -48788,7 +48831,7 @@
 /turf/open/floor/strata/floor3,
 /area/strata/interior/mining_outpost)
 "qGK" = (
-/obj/structure/reagent_dispensers/watertank,
+/obj/structure/reagent_dispensers/tank/water,
 /turf/open/asphalt/cement/cement1,
 /area/strata/exterior/outpost_platform)
 "qHk" = (
@@ -49211,7 +49254,7 @@
 /turf/open/gm/river/soro,
 /area/strata/exterior/marsh/water)
 "rfB" = (
-/obj/structure/machinery/power/reactor/colony,
+/obj/structure/machinery/power/power_generator/reactor/colony,
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/strata/floor3/east,
 /area/strata/interior/generator_substation)
@@ -49279,7 +49322,7 @@
 /turf/open/floor/strata,
 /area/strata/interior/underground_dorms/admin2)
 "rjn" = (
-/obj/structure/machinery/power/reactor/colony,
+/obj/structure/machinery/power/power_generator/reactor/colony,
 /turf/open/floor/strata/floor3/east,
 /area/strata/interior/vanyard)
 "rkb" = (
@@ -49709,7 +49752,7 @@
 /turf/open/gm/dirt/brown,
 /area/strata/exterior/landing_zones/near_lz2)
 "rNO" = (
-/obj/structure/reagent_dispensers/fueltank,
+/obj/structure/reagent_dispensers/tank/fuel,
 /obj/structure/barricade/handrail/strata,
 /turf/open/floor/greengrid,
 /area/strata/exterior/deep_jungle/planet_core_research_station_exterior)
@@ -51463,6 +51506,12 @@
 /obj/structure/largecrate/random{
 	pixel_y = 2
 	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/reagent_dispensers/tank/fuel,
 /turf/open/asphalt/cement/cement12,
 /area/strata/exterior/south_outpost)
 "uau" = (
@@ -52952,7 +53001,7 @@
 /turf/open/floor/strata/cyan1/east,
 /area/strata/interior/mining_outpost/canteen)
 "vNG" = (
-/obj/structure/reagent_dispensers/watertank,
+/obj/structure/reagent_dispensers/tank/water,
 /turf/open/floor/strata/multi_tiles,
 /area/strata/interior/mining_outpost/hive)
 "vNW" = (
@@ -53388,7 +53437,7 @@
 /turf/open/floor/prison/darkyellowfull2,
 /area/strata/interior/outpost/engi)
 "wsm" = (
-/obj/structure/reagent_dispensers/watertank,
+/obj/structure/reagent_dispensers/tank/water,
 /turf/open/floor/strata/floor3/east,
 /area/strata/interior/outpost/engi/drome)
 "wsn" = (
@@ -54628,7 +54677,7 @@
 /turf/open/asphalt/cement/cement3,
 /area/strata/exterior/south_outpost)
 "xTU" = (
-/obj/structure/machinery/power/port_gen/pacman,
+/obj/structure/machinery/power/power_generator/port_gen/pacman,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/strata/exterior/landing_zones/near_lz2)
 "xTZ" = (
@@ -61681,7 +61730,7 @@ cnB
 acc
 acc
 acc
-acc
+buN
 bnv
 brn
 bAz
@@ -61856,7 +61905,7 @@ cjw
 acc
 acc
 acc
-acc
+bvn
 bnv
 crk
 bAS
@@ -63275,7 +63324,7 @@ isa
 mvm
 ryw
 eYE
-bkH
+bkT
 bwB
 tFA
 wSb
@@ -64690,7 +64739,7 @@ aac
 aac
 acc
 acc
-aVv
+aWg
 gSz
 bme
 bnj
@@ -65725,7 +65774,7 @@ bga
 bga
 bga
 bdw
-bbJ
+bbO
 tDH
 tDH
 tDH
@@ -67498,7 +67547,7 @@ aac
 aac
 acc
 acc
-asD
+avg
 aLX
 btv
 aHQ
@@ -67675,7 +67724,7 @@ acc
 acc
 btu
 aMp
-ahg
+aiI
 aac
 acc
 acc
@@ -67847,8 +67896,8 @@ aNP
 aac
 acc
 acc
-aih
-aqq
+akB
+arp
 btq
 btq
 aac
@@ -68023,7 +68072,7 @@ acc
 acc
 acc
 aPA
-aqX
+arq
 btv
 xre
 aac
@@ -68196,7 +68245,7 @@ aNP
 cwA
 wDq
 xTw
-aoB
+apP
 aNP
 btq
 btv
@@ -68550,7 +68599,7 @@ lbh
 lTX
 kwu
 lTX
-aoB
+apP
 acc
 hYc
 xZk
@@ -82726,7 +82775,7 @@ qTF
 jWz
 aNe
 tnM
-aac
+alR
 ygq
 ygq
 meS

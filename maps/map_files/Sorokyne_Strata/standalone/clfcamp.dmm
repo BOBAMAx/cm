@@ -851,10 +851,6 @@
 	},
 /turf/open/auto_turf/snow/brown_base/layer0,
 /area/strata/exterior/far_north_outpost)
-"ck" = (
-/obj/effect/landmark/survivor_spawner/clf_synth/soro,
-/turf/open/floor/strata/orange_cover,
-/area/strata/interior/outpost/clf_dorms)
 "cl" = (
 /obj/structure/sign/poster/clf{
 	pixel_y = 34;
@@ -1068,16 +1064,20 @@
 "cR" = (
 /turf/open/gm/dirt/brown/variant_1,
 /area/strata/exterior/far_north_outpost)
-"cS" = (
+"cZ" = (
+/obj/effect/landmark/survivor_spawner/clf_synth/soro,
+/turf/open/floor/strata/orange_cover,
+/area/strata/interior/outpost/clf_dorms)
+"da" = (
+/turf/closed/wall/strata_ice/rock,
+/area/strata/interior)
+"db" = (
+/turf/closed/wall/strata_ice/jungle,
+/area/strata/interior)
+"dc" = (
 /obj/effect/landmark/survivor_spawner/clf_coordinator/soro,
 /turf/open/floor/wood,
 /area/strata/interior/outpost/clf_office)
-"db" = (
-/turf/closed/wall/strata_ice/rock,
-/area/strata/interior)
-"dc" = (
-/turf/closed/wall/strata_ice/jungle,
-/area/strata/interior)
 "dd" = (
 /obj/structure/fence/dark,
 /turf/open/gm/dirt/brown,
@@ -2725,7 +2725,7 @@ Ef
 fR
 xH
 bL
-ck
+cZ
 Sl
 Sl
 xH
@@ -2811,7 +2811,7 @@ cH
 cH
 bA
 cM
-cS
+dc
 jw
 OF
 ev
@@ -3630,9 +3630,9 @@ cH
 xZ
 "}
 (36,1,1) = {"
-db
-db
-db
+da
+da
+da
 lC
 Zo
 Zo
@@ -3646,8 +3646,8 @@ Zo
 Zo
 PJ
 cb
-db
-db
+da
+da
 ac
 ac
 ac
@@ -3663,9 +3663,9 @@ ac
 ac
 "}
 (37,1,1) = {"
-dc
 db
-db
+da
+da
 lC
 Zo
 Zo
@@ -3679,8 +3679,8 @@ Zo
 Zo
 PJ
 cc
-db
-db
+da
+da
 ac
 ac
 ac
@@ -3696,9 +3696,9 @@ ac
 ac
 "}
 (38,1,1) = {"
-dc
 db
-db
+da
+da
 lC
 Zo
 Zo
@@ -3712,8 +3712,8 @@ Zo
 Zo
 PJ
 cd
-db
-db
+da
+da
 ac
 ac
 ac
@@ -3729,9 +3729,9 @@ ac
 ac
 "}
 (39,1,1) = {"
-dc
 db
-db
+da
+da
 lC
 Zo
 Zo
@@ -3744,9 +3744,9 @@ Zo
 Zo
 Zo
 PJ
-db
-db
-db
+da
+da
+da
 ac
 ac
 ac
@@ -3762,9 +3762,9 @@ ac
 ac
 "}
 (40,1,1) = {"
-dc
-dc
 db
+db
+da
 lC
 Zo
 Zo
@@ -3777,9 +3777,9 @@ Zo
 Zo
 Zo
 PJ
-db
-db
-db
+da
+da
+da
 ac
 ac
 ac
@@ -3795,9 +3795,9 @@ ac
 ac
 "}
 (41,1,1) = {"
-dc
-dc
 db
+db
+da
 Xp
 wl
 wl
@@ -3810,9 +3810,9 @@ wl
 wl
 wl
 lj
-db
-db
-db
+da
+da
+da
 ac
 ac
 ac
@@ -3828,24 +3828,24 @@ ac
 ac
 "}
 (42,1,1) = {"
-dc
-dc
-dc
-dc
-dc
+db
+db
+db
+db
+db
 fb
 fR
 fR
 fR
 jM
 SG
-db
-db
-db
-db
-db
-db
-db
+da
+da
+da
+da
+da
+da
+da
 ac
 ac
 ac
@@ -3861,17 +3861,6 @@ ac
 ac
 "}
 (43,1,1) = {"
-dc
-dc
-dc
-dc
-dc
-dc
-dc
-dc
-dc
-dc
-dc
 db
 db
 db
@@ -3879,6 +3868,17 @@ db
 db
 db
 db
+db
+db
+db
+db
+da
+da
+da
+da
+da
+da
+da
 ac
 ac
 ac

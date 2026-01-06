@@ -53977,7 +53977,7 @@
 	color = "#6b675e"
 	},
 /obj/item/tool/kitchen/tray,
-/obj/item/reagent_container/glass/beaker/silver,
+/obj/item/reagent_container/glass/beaker/catalyst/silver,
 /obj/item/reagent_container/glass/beaker,
 /obj/item/reagent_container/glass/beaker,
 /obj/item/reagent_container/glass/beaker,
@@ -117934,12 +117934,12 @@
 "qRx" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/item/storage/photo_album,
-/obj/item/clothing/accessory/medal/bronze/conduct{
+/obj/item/clothing/accessory/medal/legacy/distinguished_conduct{
 	pixel_y = 4;
 	pixel_x = -2;
 	layer = 3.03
 	},
-/obj/item/clothing/accessory/medal/bronze/heart{
+/obj/item/clothing/accessory/medal/legacy/bronze_heart{
 	pixel_y = 12;
 	pixel_x = 4
 	},
